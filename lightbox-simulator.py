@@ -27,7 +27,7 @@ class LedStripWidget(QWidget):
             self.labels.append(label)
         self.setLayout(strip)
     def changeColors(self,colors):
-        if(len(colors) == 160):
+        if(len(colors) == self.numLed):
             for i, color in enumerate(colors):
                 pal = QPalette()
                 pal.setColor(QPalette.Background, color)
